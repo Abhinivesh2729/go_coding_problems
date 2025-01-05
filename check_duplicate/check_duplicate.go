@@ -6,7 +6,7 @@ import "fmt"
 
 func main() {
 	array := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 3}
-	result := checkDuplicate(&array)
+	result := checkDuplicate(array)
 	if result {
 		fmt.Println("The array contains duplicates")
 	} else {
@@ -14,11 +14,11 @@ func main() {
 	}
 }
 
-func checkDuplicate(array *[]int) bool {
+func checkDuplicate(array []int) bool {
 
-	for _, number := range *array {
-		for i := 0; i <= len(*array); i++ {
-			if number == (*array)[i] {
+	for _, number := range array {
+		for i := 0; i <= len(array); i++ {
+			if number == (array)[i] {
 				return true
 			}
 		}
